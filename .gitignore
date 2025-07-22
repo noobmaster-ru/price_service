@@ -1,4 +1,6 @@
 *.txt
-venv/
+.venv/
 __pycache__/
 constants.py
+*.pyc
+.DS_Store
