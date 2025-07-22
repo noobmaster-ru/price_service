@@ -34,28 +34,4 @@ if __name__ == "__main__":
             payment_sale_amount = sale.get("paymentSaleAmount")
             finished_price = sale.get("finishedPrice")
             discount_percent = sale.get("discountPercent")
-            file.write(f"{nm_id}: {total_price:.1f}, {discount_percent:.1f}, {total_price*(1 - discount_percent/100):.1f}, {total_price*(1-discount_percent/100)*(1 - payment_sale_amount/100)*(1-spp/100):.1f}, {total_price*(1-discount_percent/100)*(1 - payment_sale_amount/100)*(1-spp/100)*0.9:.1f}\n")
-            
-            # print("nm_id = ",nm_id)
-            # print("total_price = ",total_price)
-            # print("discount_percent = ", discount_percent)
-            # print("price with discount_percent(seller approach) = ", total_price*(1 - discount_percent/100))
-            # print("price with discount_percent and payment_sale_amount and spp = ",total_price*(1-discount_percent/100)*(1 - payment_sale_amount/100)*(1-spp/100))
-            # print("my_price = ", total_price*(1-discount_percent/100)*(1 - payment_sale_amount/100)*(1-spp/100)*0.9, "\n")
-
-
-    # data = response_goods.json()
-    # list_goods = data.get("data", {}).get("listGoods", [])
-    # with open("prices.txt", "w", encoding="utf-8") as file:
-    #     for product in list_goods:
-    #         nm_id = product.get("nmID")
-    #         vendor_code = product.get("vendorCode")
-    #         currency_iso_code_4217 = product.get("currencyIsoCode4217")
-    #         discount = product.get("discount")
-    #         club_discount = product.get("clubDiscount")
-
-    #         sizes = product.get("sizes")[0]
-    #         clubDiscountedPrice = sizes.get("clubDiscountedPrice")
-    #         price = sizes.get("price")
-    #         # print([nm_id, clubDiscountedPrice, discount, club_discount])
-    #         file.write(f"{nm_id}({vendor_code}): {price}, {clubDiscountedPrice}; current = {currency_iso_code_4217}\n")
+            file.write(f"{nm_id}: {total_price:.1f}, {discount_percent:.1f}, {total_price*(1 - discount_percent/100):.1f}, {total_price*(1-discount_percent/100)*(1 - payment_sale_amount/100)*(1-spp/100):.1f}, {total_price*(1-discount_percent/100)*(1 - payment_sale_amount/100)*(1-spp/100)*0.98:.1f}\n")
