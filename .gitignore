@@ -4,3 +4,4 @@ __pycache__/
 constants.py
 *.pyc
 .DS_Store
+prices_api.py

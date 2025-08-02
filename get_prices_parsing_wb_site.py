@@ -31,6 +31,7 @@ def extract_wallet_price(url: str, driver) -> Optional[int]:
 
 def main():
     # Настройка Chrome
+    start = time.perf_counter()
     options = Options()
     options.add_argument("--disable-gpu")
 
@@ -62,7 +63,7 @@ def main():
     #     writer.writerows(results)
 
     print("✅ Saved to wallet_prices.csv")
-
+    print("time for exec = ",time.perf_counter() - start)
 
 if __name__ == "__main__":
     main()
